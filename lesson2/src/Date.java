@@ -3,6 +3,8 @@ import java.time.format.DateTimeFormatter;
 
 public class Date implements Command { // Имплементируюсь от Command
 
+    String date = LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE); // Переменная которая будет хранить дату (форматирована)
+
     @Override
     public String getName() {
         return "Date";
@@ -10,7 +12,6 @@ public class Date implements Command { // Имплементируюсь от Co
 
     @Override
     public String execute() {
-        String date = LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE); // Переменная которая будет хранить дату (форматирована)
         return date;
     }
 }
