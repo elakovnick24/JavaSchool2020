@@ -1,3 +1,10 @@
+
+class Demo1 {
+    public int a;
+}
+
+
+
 public class Demo {
     public static void main(String[] args) {
 
@@ -17,7 +24,9 @@ public class Demo {
         list1.add("Банк 10");
 
         // Вывожу полученный элемент на экран
-        System.out.println(list1.get(10));
+        System.out.println(list1.get(9));
+        System.out.println(list1.get(0));
+        System.out.println(list1.get(1));
 
         // Заполняю список интами
         LList list2 = new LList(); // Создаю новый объект
@@ -32,6 +41,12 @@ public class Demo {
 
         // Вывожу полученный элемент на экран
         System.out.println(list2.get(0));
+
+        LList list3 = new LList();
+        list3.add(new Demo1()); // Положили объект типа Demo1
+        Demo1 demo1 = (Demo1) list3.get(0);
+
+        System.out.println(demo1.a);
     }
 }
 

@@ -26,11 +26,11 @@ public class LList {
     private Node root; // Начало списка
 
     public void add(Object item) {   //
-        Node tmpItem = new Node(item); // Сохдаем новую ячейку списка
+        Node tmpItem = new Node(item); // Создаем новую ячейку списка
         Node lastItem = findLast(); // Присваиваем последний элемент или null в переменную
 
         if (lastItem != null) {
-            lastItem.next = tmpItem; // Здесь укащзываем на новый созданный элемент (next)
+            lastItem.next = tmpItem; // Здесь указываем на новый созданный элемент (next)
         } else {
             root = tmpItem; //
         }
@@ -38,7 +38,7 @@ public class LList {
 
     public Object get(int id) {  // Получить элемент # ID
         // TODO
-        if (id < 0 || id > this.size()){  // Проверяем на на меньше нуля и больше size
+        if (id < 0 || id > this.size() - 1){  // Проверяем на на меньше нуля и больше size.
             throw new IndexOutOfBoundsException("NO!");
         }
         if (root == null) { // Проверяем на null
@@ -54,7 +54,7 @@ public class LList {
     }
 
 
-    public int size() { // Размер списка
+    public int size() { // Размер списка -- кол-во элементов
         int size = 0;
 
         if (root == null)
@@ -88,3 +88,4 @@ public class LList {
     }
 }
 
+// Сделать для листа remove с индексом и без для ArrayList - реализация
