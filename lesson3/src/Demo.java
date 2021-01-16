@@ -22,11 +22,20 @@ public class Demo {
         list1.add("Банк 8");
         list1.add("Банк 9");
         list1.add("Банк 10");
+        //list1.remove();
+        //System.out.println(list1.get(0));
+        list1.remove(9);
 
-        // Вывожу полученный элемент на экран
+        //list1.removeLast(); // Удаляю последний
+
         System.out.println(list1.get(9));
+        // Вывожу полученный элемент на экран
+        System.out.println(list1.get(6));
+       /* System.out.println(list1.get(0));
+        System.out.println(list1.get(4));
+        System.out.println(list1.get(8));
         System.out.println(list1.get(0));
-        System.out.println(list1.get(1));
+        System.out.println(list1.get(1));*/
 
         // Заполняю список интами
         LList list2 = new LList(); // Создаю новый объект
